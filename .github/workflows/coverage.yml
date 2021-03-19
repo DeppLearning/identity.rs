@@ -17,20 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: nightly
-          override: true
-          components: llvm-tools-preview
-      - uses: actions-rs/install@v0.1
-        with:
-          crate: cargo-binutils
-          version: 0.3.3
-      - uses: actions-rs/install@v0.1
-        with:
-          crate: rustfilt
-          version: 0.2.1
       - uses: actions-rs/tarpaulin@v0.1.0
         with:
           out-type: Lcov
