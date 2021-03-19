@@ -17,13 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions-rs/tarpaulin@v0.1.0
+      - uses: actions-rs/tarpaulin@v0.1
         with:
-          out-type: Lcov
+          out-type: 'Lcov'
       - uses: actions/upload-artifact@v1
         with:
-          name: code-coverage-report
-          path: cobertura*
+          path: cobertura.xml
       - uses: coverallsapp/github-action@v1.1.2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
