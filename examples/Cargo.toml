@@ -15,38 +15,38 @@ tokio = { version = "1.17.0", features = ["full"] }
 name = "getting_started"
 path = "getting_started.rs"
 
-[[example]]
-name = "account_create"
-path = "account/create_did.rs"
+# [[example]]
+# name = "account_create"
+# path = "account/create_did.rs"
 
-[[example]]
-name = "account_config"
-path = "account/config.rs"
+# [[example]]
+# name = "account_config"
+# path = "account/config.rs"
 
-[[example]]
-name = "account_manipulate"
-path = "account/manipulate_did.rs"
+# [[example]]
+# name = "account_manipulate"
+# path = "account/manipulate_did.rs"
 
-[[example]]
-name = "account_lazy"
-path = "account/lazy.rs"
+# [[example]]
+# name = "account_lazy"
+# path = "account/lazy.rs"
 
-[[example]]
-name = "account_signing"
-path = "account/signing.rs"
+# [[example]]
+# name = "account_signing"
+# path = "account/signing.rs"
 
 # TODO: Temporarily disabled until iotaledger/stronghold.rs#353 is fixed.
 # [[example]]
 # name = "account_multiple"
 # path = "account/multiple_identities.rs"
 
-[[example]]
-name = "account_unchecked"
-path = "account/unchecked.rs"
+# [[example]]
+# name = "account_unchecked"
+# path = "account/unchecked.rs"
 
-[[example]]
-name = "account_encryption"
-path = "account/encryption.rs"
+# [[example]]
+# name = "account_encryption"
+# path = "account/encryption.rs"
 
 [[example]]
 name = "create_did"

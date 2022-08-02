@@ -176,6 +176,7 @@ impl Storage for MemStore {
 
         Ok(())
       }
+      KeyType::Secp256k1 => todo!("Account does not support 'Secp256k1"),
       KeyType::X25519 => {
         let keypair: KeyPair = KeyPair::try_from_private_key_bytes(KeyType::X25519, private_key.as_ref())
           .map_err(|err| Error::InvalidPrivateKey(err.to_string()))?;
@@ -241,6 +242,7 @@ impl Storage for MemStore {
         let signature: Signature = Signature::new(signature.to_vec());
         Ok(signature)
       }
+      KeyType::Secp256k1 => todo!("Account does not support 'Secp256k1"),
       KeyType::X25519 => {
         // Calling key_sign on key types that cannot be signed with should return an error.
         return Err(identity_did::Error::InvalidMethodType.into());
@@ -327,6 +329,7 @@ impl Storage for MemStore {
       KeyType::Ed25519 => Err(Error::InvalidPrivateKey(
         "Ed25519 keys are not supported for decryption".to_owned(),
       )),
+      KeyType::Secp256k1 => todo!("Account does not support 'Secp256k1"),
       KeyType::X25519 => {
         let public_key: [u8; X25519::PUBLIC_KEY_LENGTH] =
           data.ephemeral_public_key.clone().try_into().map_err(|_| {

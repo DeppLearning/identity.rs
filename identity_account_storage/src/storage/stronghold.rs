@@ -209,6 +209,7 @@ impl Storage for Stronghold {
         KeyType::Ed25519 | KeyType::X25519 => {
           generate_private_key(&client, &tmp_location)?;
         }
+        KeyType::Secp256k1 => todo!("Account does not support 'Secp256k1"),
       }
 
       let public_key: PublicKey = retrieve_public_key(&client, &tmp_location)?;
@@ -260,6 +261,7 @@ impl Storage for Stronghold {
 
     match location.key_type {
       KeyType::Ed25519 => sign_ed25519(&client, data, location),
+      KeyType::Secp256k1 => todo!("Account does not support 'Secp256k1"),
       KeyType::X25519 => Err(identity_did::Error::InvalidMethodType.into()),
     }
   }
@@ -438,6 +440,7 @@ pub(crate) fn insert_private_key(client: &Client, mut private_key: PrivateKey, l
 
 pub(crate) fn retrieve_public_key(client: &Client, location: &KeyLocation) -> Result<PublicKey> {
   match location.key_type {
+    KeyType::Secp256k1 => todo!("Account does not support 'Secp256k1"),
     KeyType::Ed25519 | KeyType::X25519 => {
       let public_key: procedures::PublicKey = procedures::PublicKey {
         ty: location_key_type(location),
@@ -700,6 +703,7 @@ impl From<&KeyLocation> for Location {
 fn location_key_type(location: &KeyLocation) -> procedures::KeyType {
   match location.key_type {
     KeyType::Ed25519 => procedures::KeyType::Ed25519,
+    KeyType::Secp256k1 => todo!("Account does not support 'Secp256k1"),
     KeyType::X25519 => procedures::KeyType::X25519,
   }
 }

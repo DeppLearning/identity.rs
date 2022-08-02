@@ -554,7 +554,7 @@ where
       KeyType::Ed25519 => {
         RemoteEd25519::create_signature(data, method_url.to_string(), &private, options).await?;
       }
-      KeyType::X25519 => return Err(identity_did::Error::InvalidMethodType.into()),
+      KeyType::Secp256k1 | KeyType::X25519 => return Err(identity_did::Error::InvalidMethodType.into()),
     }
 
     Ok(())

@@ -56,6 +56,7 @@ impl KeyLocation {
     let method_data: &MethodData = method.data();
 
     let key_type: KeyType = match method.type_() {
+      MethodType::EcdsaSecp256k1Signature2019 => todo!("Account does not support 'Secp256k1"),
       MethodType::Ed25519VerificationKey2018 => KeyType::Ed25519,
       MethodType::X25519KeyAgreementKey2019 => KeyType::X25519,
     };

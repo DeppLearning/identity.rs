@@ -51,8 +51,13 @@ impl IdentityState {
   }
 }
 
-#[derive(Copy, Clone, Debug, Default, PartialEq, Deserialize, Serialize)]
+#[derive(Copy, Clone, Debug, PartialEq, Deserialize, Serialize)]
 pub(crate) enum StateVersion {
-  #[default]
   V1 = 1,
+}
+
+impl Default for StateVersion {
+  fn default() -> Self {
+      Self::V1
+  }
 }
