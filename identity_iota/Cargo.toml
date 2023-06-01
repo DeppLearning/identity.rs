@@ -26,8 +26,8 @@ anyhow = "1.0.64"
 tokio = { version = "1.17.0", features = ["full"] }
 
 [dev-dependencies.iota-sdk]
-git = "https://github.com/iotaledger/iota-sdk"
-rev = "6e939cfdc9d6075d024ccb43506a50da1cc4afcc"
+git = "https://github.com/DeppLearning/iota-sdk"
+rev = "f174a907ab1ff0630fddea556934db750a477f22"
 default-features = false
 features = [
   "tls",

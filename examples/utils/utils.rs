@@ -99,7 +99,7 @@ pub async fn get_address(client: &Client, secret_manager: &mut SecretManager) ->
       Err(err) => anyhow::bail!(err),
     }
   } else {
-    anyhow::bail!("expected a `StrongholdSecretManager`");
+    // anyhow::bail!("expected a `StrongholdSecretManager`");
   }
 
   let address = client.get_addresses(secret_manager).with_range(0..1).get_raw().await?[0];
