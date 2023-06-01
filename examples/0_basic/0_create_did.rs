@@ -27,10 +27,10 @@ use iota_sdk::types::block::output::AliasOutput;
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
   // The API endpoint of an IOTA node, e.g. Hornet.
-  let api_endpoint: &str = "http://127.0.0.1:14265";
+  let api_endpoint: &str = "https://v2202304147659227197.megasrv.de";
 
   // The faucet endpoint allows requesting funds for testing purposes.
-  let faucet_endpoint: &str = "http://127.0.0.1:8091/api/enqueue";
+  let faucet_endpoint: &str = "https://faucet.testnet.shimmer.network/api/enqueue";
 
   // Create a new client to interact with the IOTA ledger.
   let client: Client = Client::builder()
