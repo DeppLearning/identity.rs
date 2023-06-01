@@ -12,7 +12,7 @@ rust-version.workspace = true
 description = "Abstractions over storage for cryptographic keys used in DID Documents"
 
 [dependencies]
-async-trait = { version = "0.1.64", default-features = false }
+async-trait = { version = "0.1.68", default-features = false }
 futures = { version = "0.3.27", default-features = false, features = ["async-await"] }
 identity_core = { version = "=0.7.0-alpha.6", path = "../identity_core", default-features = false }
 identity_credential = { version = "=0.7.0-alpha.6", path = "../identity_credential", default-features = false, features = ["credential", "presentation"] }

@@ -14,7 +14,7 @@ description = "Tangle Client integration for the IOTA DID Method."
 [workspace]
 
 [dependencies]
-async-trait = { version = "0.1", default-features = false }
+async-trait = { version = "0.1.68", default-features = false }
 bee-rest-api = { version = "0.1.7", default-features = false }
 brotli = { version = "3.3", default-features = false, features = ["std"] }
 form_urlencoded = { version = "=1.1.0" }
